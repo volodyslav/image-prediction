@@ -7,6 +7,7 @@
     --gray: #EEEEEE;
 }
 
+
 *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
@@ -22,8 +23,17 @@ body {
 header {
     background-color: var(--secondary-dark);
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+}
+
+a, a:hover{
+    color: var(--gray);
+    text-decoration: none;
+}
+
+h2{
+    text-align: center;
+    margin: 20px;
 }
 
 input[type="file"] {
@@ -79,6 +89,7 @@ img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    margin: 0 auto;
   }
   
 @media (min-width: 600px) {
@@ -95,61 +106,69 @@ img {
 
 /* Training */
 
+
+
 .training-show{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     gap: 1.2rem;
-    margin: 1rem;
+    margin: 1rem auto; 
+    
 }
 
-.train-images{
+button{
     background-color: var(--teal);
     border: none;
     border-radius: 10px;
     padding: 10px;
     font-size: larger;
     color: var(--gray);
+    margin: 10px;
 }
 
-.train-images:hover{
+button:hover{
     background-color: var(--teal-lighter);
 }
 
-
-/* Check train and index div */  
-
-.select-pos-train {
-    visibility: visible;
-    display: block;
-}
-
-.select-pos-class {
-    visibility: hidden;
-    display: none;
-}
-
-.index-show {
-    visibility: visible;
-    display: block;
-}
-
-.training-show {
-    visibility: hidden;
-    display: none;
-    margin-top: 1.5rem;
+button:disabled{
+    background-color: var(--secondary-dark);
 }
 
 
-.select-pos-class, .select-pos-train {
-    background-color: var(--teal);
-    color: var(--gray);
-    border: none;
-    border-radius: 10px;
+/* Style for text input field */
+input[type="text"] {
+    width: 50%;
     padding: 10px;
-    cursor: pointer;
-    font-size: larger;
+    margin: 5px auto;
+    box-sizing: border-box;
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+   
 }
 
-.select-pos-class:hover, .select-pos-train:hover{
-    background-color: var(--teal-lighter);
+/* Style when the input field is focused */
+input[type="text"]:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
 }
+
+/* Style when the input field has an error */
+input[type="text"].error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+.training-show, .index-show{
+    border: 1px solid var(--gray);
+    margin: 10px;
+    
+}
+
+
+
   
