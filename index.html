@@ -11,20 +11,37 @@
 <body>
     <header>
         <h1>Image Classification</h1>
+        <button class="select-pos-train">Training</button>
+        <button class="select-pos-class">Classification</button>
     </header>
     <main>
-        <img id="img-predict" />
-        <div id="image-form">
-            <label for="image-input" id="image-label">
-                Upload an image
-                <input type="file" id="image-input" accept="image/*" required>
-            </label>
+        <div class="index-show">
+            <img id="img-predict" />
+            <div id="image-form">
+                <label for="image-input" id="image-label">
+                    Upload an image
+                    <input type="file" id="image-input" accept="image/*" required>
+                </label>
+            </div>
+            <div id="prediction-div">
+                <h2>Predicted Class:</h2>
+                <p id="prediction-text"></p>
+            </div>
         </div>
-        <div id="prediction-div">
-            <h2>Predicted Class:</h2>
-            <p id="prediction-text"></p>
+        <div class="training-show">
+            <div id="image-form">
+                <label for="image-input-train" id="image-label-train">
+                    Upload images
+                    <input type="file" id="image-input-train" accept="image/*" required multiple>
+                </label>
+            </div>
+            <div style="display: flex; justify-content: center; margin: 1rem; align-items: center;">
+                <p class="train-samples" style="margin-right: 1rem; font-size: larger;">0 samples</p>
+                <button class="train-images">Train</button>
+            </div>
+            
         </div>
     </main>
-    <script src="./js/main.js"></script>
+    <script src="main.js"></script> 
 </body>
 </html>

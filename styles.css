@@ -22,14 +22,15 @@ body {
 header {
     background-color: var(--secondary-dark);
     padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 input[type="file"] {
     display: none;
   }
   
-#image-label{
+#image-label, #image-label-train{
     border: 1px solid var(--gray);
     display: inline-block;
     padding: 6px 12px;
@@ -37,7 +38,7 @@ input[type="file"] {
     text-align: center;
 }
 
-#image-label:hover{
+#image-label:hover, #image-label-train:hover{
     animation: scaleImgLabel 1s ease-in-out forwards;
 }
 
@@ -91,4 +92,64 @@ img {
       width: 25%; /* On even larger screens, image takes quarter width */
     }
   }
+
+/* Training */
+
+.training-show{
+    text-align: center;
+    gap: 1.2rem;
+    margin: 1rem;
+}
+
+.train-images{
+    background-color: var(--teal);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: larger;
+    color: var(--gray);
+}
+
+.train-images:hover{
+    background-color: var(--teal-lighter);
+}
+
+
+/* Check train and index div */  
+
+.select-pos-train {
+    visibility: visible;
+    display: block;
+}
+
+.select-pos-class {
+    visibility: hidden;
+    display: none;
+}
+
+.index-show {
+    visibility: visible;
+    display: block;
+}
+
+.training-show {
+    visibility: hidden;
+    display: none;
+    margin-top: 1.5rem;
+}
+
+
+.select-pos-class, .select-pos-train {
+    background-color: var(--teal);
+    color: var(--gray);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.select-pos-class:hover, .select-pos-train:hover{
+    background-color: var(--teal-lighter);
+}
   
